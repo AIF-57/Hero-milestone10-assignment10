@@ -1,11 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
+import {faHandshakeAngle,faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
+const aUth = auth;
 const Navbar = () => {
+    const [user] = useAuthState(aUth);
+    const SignOut = () => {
+        signOut(aUth)
+    } 
+
+    console.log(user);
     return (
-        <div className='grid grid-cols-6 px-10 gap-10 items-center mt-5'>
+        <div className='grid grid-cols-6 px-10 gap-10 items-center mt-2 mb-1'>
             <div className="logo col-span-2 text-left">
                 <Link to={'/'}>
                 <FontAwesomeIcon icon={faHandshakeAngle} className='text-6xl'></FontAwesomeIcon>
@@ -17,9 +27,14 @@ const Navbar = () => {
                 <Link to={'/services'} className='mx-8'>Services</Link>
                 <Link to={'/blogs'}>Blogs</Link>
                 <Link to={'/about'} className='mx-8'>About</Link>
-                <Link to={'/contact'}>Contact up</Link>
+                <Link to={'/contact'}>Contact us</Link>
                 <Link to={'/career'} className='mx-8'>Career</Link>
-                <Link to={'/account'}>Account</Link>
+                {
+                    user ? 
+                    <button onClick={SignOut}><FontAwesomeIcon icon={faSignOutAlt}></FontAwesomeIcon></button>
+                    :
+                    <Link to={'/account'}>Account</Link>
+                }
             </nav>
         </div>
     );
