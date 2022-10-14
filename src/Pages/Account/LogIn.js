@@ -34,7 +34,7 @@ const LogIn = () => {
                 <form onSubmit={signIn} className='flex flex-col items-center w-3/4 h-auto mx-auto'>
                     <input ref={emailRef} type="email" name='email' placeholder='email' className='border-b-2 border-[#2f4d5a] px-5 w-4/5 h-8'/>
                     <input ref={passwordRef} type="password" name='password' placeholder='password' className='border-b-2 border-[#2f4d5a] px-5 w-4/5 h-8 my-5'/>
-                    <button className='bg-[#FFC312] text-white text-sm font-bold rounded-sm w-4/5 h-8'>Log in</button>
+                    <button className='bg-[#ffb03b] text-white text-sm font-bold rounded-sm w-4/5 h-8'>Log in</button>
                     </form>
                     <p className='my-2 font-bold'>or</p>
                     <button onClick={() => signInWithGoogle()} className='mx-auto bg-[#4285f4] text-white text-sm font-bold rounded-sm w-3/5 h-8'>Google</button>

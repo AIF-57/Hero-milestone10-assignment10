@@ -1,0 +1,29 @@
+.featureCard{
+    position: relative;
+    overflow: hidden;
+}
+.featureCard::before{
+    content: '';
+    top: -40px;
+    right:-70px;
+    background-color: #ffb03b;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    transition: ease-in-out .4s;
+}
+.card{
+    z-index: 2;
+}
+.featureCard:hover::before{
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    z-index: 1;
+}
+.featureCard:hover .card .white{
+    color: #fff;
+}
