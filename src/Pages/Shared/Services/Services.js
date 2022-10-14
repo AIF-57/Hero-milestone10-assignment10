@@ -10,8 +10,14 @@ const Services = () => {
 
     const [cartItems,setCartItems] = useState([]);
     const addToCart = service => {
-        const newCartItems = [...cartItems,service];
-        setCartItems(newCartItems);
+        let newCartItems=[];
+        const matchService = cartItems.find(cartItem => cartItem.id === service.id);
+        if (matchService) {
+            alert('service already added into cart')
+        }else{
+             newCartItems = [...cartItems,service];
+             setCartItems(newCartItems);
+        };
     };
 
     return (
