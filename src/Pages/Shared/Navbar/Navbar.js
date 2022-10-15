@@ -13,7 +13,7 @@ const Navbar = () => {
         signOut(aUth)
     } 
 
-    console.log(user);
+    // console.log(user);
     return (
         <div className='grid grid-cols-6 px-10 gap-10 items-center mt-2 mb-1'>
             <div className="logo col-span-2 text-left">

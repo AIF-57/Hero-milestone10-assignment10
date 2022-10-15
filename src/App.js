@@ -5,7 +5,6 @@ import Register from './Pages/Account/Register';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import HomePage from './Pages/Home/HomePage/HomePage';
 import NotFound from './Pages/NotFound/NotFound';
-import Cart from './Pages/Shared/Cart/Cart';
 import Navbar from './Pages/Shared/Navbar/Navbar';
 
 function App() {

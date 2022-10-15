@@ -4,8 +4,8 @@ import { faGear } from '@fortawesome/free-solid-svg-icons'
 
 
 const Service = ({service,addToCart}) => {
-    console.log(service)
-    const {serviceName,details,price} = service;
+    const {id,serviceName,details,price} = service;
+
     return (
         <div>
         <div className="serviceCard py-4 border border-dashed rounded-md bg-white flex flex-col justify-center">

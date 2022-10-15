@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 
 
-const Cart = ({cartItems}) => {
-    console.log(cartItems);
+const Cart = ({cartItems,removeItemFromCart}) => {
 
     const navigate = useNavigate();
     const proceedCheckOut = () =>{
@@ -13,11 +12,12 @@ const Cart = ({cartItems}) => {
     return (
         <div>
             <p>Cart from cart</p>
-            <p>{cartItems.length}</p>
             <div className="cartItemDetails">
                 {
                     cartItems.map(cartItem => <CartItem
-                        cartItem={cartItem}></CartItem>)
+                        key={cartItem.id}
+                        cartItem={cartItem}
+                        removeItemFromCart={removeItemFromCart}></CartItem>)
                 }
                 
                 {

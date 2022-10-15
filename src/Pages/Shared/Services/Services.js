@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { addToDB, removeFromDB } from '../../../hooks/useCartDB';
 import useServices from '../../../hooks/useServices';
 import Cart from '../Cart/Cart';
 import Service from './Service';
@@ -6,7 +7,6 @@ import Service from './Service';
 
 const Services = () => {
     const {services} = useServices();
-    console.log(services);
 
     const [cartItems,setCartItems] = useState([]);
     const addToCart = service => {
@@ -18,7 +18,17 @@ const Services = () => {
              newCartItems = [...cartItems,service];
              setCartItems(newCartItems);
         };
+        // newCartItems = [...cartItems,service];
+        // setCartItems(newCartItems);
+        addToDB(service.id);
     };
+
+    const removeItemFromCart = item =>{
+        let restItems = cartItems.filter(cartItem => cartItem.id !== item.id);
+        setCartItems(restItems);
+        removeFromDB(item.id);
+    };
+
 
     return (
         <div className='py-10'>
@@ -30,12 +40,16 @@ const Services = () => {
             {
                 services.map(service => <Service 
                     service={service}
-                    key={service.id}
-                    addToCart={addToCart}></Service>)
+                    addToCart={addToCart}
+                    removeItemFromCart={removeItemFromCart}
+                    key={service.id}></Service>)
             }
             </div>
             <div className="cartContainer bg-[#2f4d5a] px-4 text-white py-5 rounded-l-md">
-                <Cart cartItems={cartItems}></Cart>
+                <Cart 
+                cartItems={cartItems}
+                removeItemFromCart={removeItemFromCart}
+                ></Cart>
             </div>
             </div>
         </div>
