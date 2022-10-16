@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import useCart from '../../../hooks/useCart';
 import { addToDB, removeFromDB } from '../../../hooks/useCartDB';
 import useServices from '../../../hooks/useServices';
 import Cart from '../Cart/Cart';
@@ -8,7 +8,7 @@ import Service from './Service';
 const Services = () => {
     const {services} = useServices();
 
-    const [cartItems,setCartItems] = useState([]);
+    const {cartItems,setCartItems} = useCart(services);
     const addToCart = service => {
         let newCartItems=[];
         const matchService = cartItems.find(cartItem => cartItem.id === service.id);
@@ -18,8 +18,6 @@ const Services = () => {
              newCartItems = [...cartItems,service];
              setCartItems(newCartItems);
         };
-        // newCartItems = [...cartItems,service];
-        // setCartItems(newCartItems);
         addToDB(service.id);
     };
 
@@ -45,7 +43,7 @@ const Services = () => {
                     key={service.id}></Service>)
             }
             </div>
-            <div className="cartContainer bg-[#2f4d5a] px-4 text-white py-5 rounded-l-md">
+            <div className="cartContainer max-h-[450px] overflow-y-scroll bg-[#2f4d5a] px-4 text-white py-5 rounded-l-md">
                 <Cart 
                 cartItems={cartItems}
                 removeItemFromCart={removeItemFromCart}

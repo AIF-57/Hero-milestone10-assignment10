@@ -11,7 +11,7 @@ const CartItem = ({cartItem,removeItemFromCart}) => {
             <div className="">
                 <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
                 <p className='font-semibold text-sm'>{serviceName}</p>
-                <p className='font-bold text-lg'>{price}</p>
+                <p className='font-bold text-lg'>${price}</p>
             </div>
             <button onClick={() => removeItemFromCart(cartItem)} className='removeItemBtn w-8 h-8 bg-rose-400 text-red-700 rounded-full'><FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon></button>
         </div>

@@ -11,7 +11,7 @@ const Cart = ({cartItems,removeItemFromCart}) => {
     }
     return (
         <div>
-            <p>Cart from cart</p>
+            <p className='font-bold mb-4 text-lg'>Cart</p>
             <div className="cartItemDetails">
                 {
                     cartItems.map(cartItem => <CartItem

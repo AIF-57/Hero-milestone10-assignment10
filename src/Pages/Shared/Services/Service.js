@@ -4,7 +4,7 @@ import { faGear } from '@fortawesome/free-solid-svg-icons'
 
 
 const Service = ({service,addToCart}) => {
-    const {id,serviceName,details,price} = service;
+    const {serviceName,details,price} = service;
 
     return (
         <div>

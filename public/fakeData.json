@@ -3,24 +3,29 @@
         "id":"01",
         "serviceName":"Audit Services",
         "details":"Indepth study of existing systems, procedures and controls for proper understanding. Suggestions..",
-        "price":"100"
+        "price":"100",
+        "quantity":"1"
     },
     {
         "id":"02",
         "serviceName":"Corporate Finance",
         "details":"Preparations of Project Reports, Preparation of CMA data for bank loans, Private placement of shares, Inter-Corporate..",
-        "price":"150"
+        "price":"150",
+        "quantity":"1"
+        
     },
     {
         "id":"03",
         "serviceName":"Accounting Services",
         "details":"Accounting System Design & Implementation, Financial Accounting, Budgeting, Financial Reporting, MIS Reports..",
-        "price":"100"
+        "price":"100",
+        "quantity":"1"
     },
     {
         "id":"04",
         "serviceName":"Income Tax",
         "details":"Consultancy on various intricate matters pertaining to Income tax. Effective tax management, tax structuring..",
-        "price":"100"
+        "price":"100",
+        "quantity":"1"
     }
 ]
