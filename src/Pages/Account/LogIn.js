@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
 import {useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle} from 'react-firebase-hooks/auth'
@@ -8,13 +8,17 @@ import auth from '../../firebase.init';
 
 const LogIn = () => {
     const navigate = useNavigate();
+    let location = useLocation();
+  
+    let from = location.state?.from?.pathname || "/";
+  
     
     const [signInWithGoogle,error] = useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
     const [user] = useAuthState(auth)
     
     if (user) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
     const emailRef = useRef('');
     const passwordRef = useRef('');

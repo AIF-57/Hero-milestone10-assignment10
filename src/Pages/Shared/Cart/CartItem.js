@@ -8,7 +8,7 @@ const CartItem = ({cartItem,removeItemFromCart}) => {
     console.log(cartItem)
     return (
         <div className='bg-white text-[#ffb03b] my-2 rounded-md flex justify-evenly items-center py-5'>
-            <div className="">
+            <div className="min-w-[60%]">
                 <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
                 <p className='font-semibold text-sm'>{serviceName}</p>
                 <p className='font-bold text-lg'>${price}</p>
