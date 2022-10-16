@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Register = () => {
 
-    const [createUserWithEmailAndPassword,user,error,] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword,error,] = useCreateUserWithEmailAndPassword(auth);
+    const [user] = useAuthState(auth);
+    
+
+    const navigate = useNavigate();
+    let location = useLocation();
+  
+    let from = location.state?.from?.pathname || "/";
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+
       const register = event =>{
         event.preventDefault();
         const name = event.target.name.value;

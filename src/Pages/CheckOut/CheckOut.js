@@ -16,6 +16,7 @@ const CheckOut = () => {
             <p className='font-semibold'>Total Items : <span className='font-extrabold'>{cartItems.length}</span></p>
             {
                 cartItems.map(cartItem => <CheckOutItem
+                    key={cartItem.id}
                     CheckOutItemDetails={cartItem}></CheckOutItem>)
             }
             <button className='bg-[#ffb03b] py-2 w-64 font-bold rounded-md'>${totalPrice}</button>

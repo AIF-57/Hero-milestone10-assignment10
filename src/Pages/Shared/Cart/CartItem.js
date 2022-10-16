@@ -5,7 +5,6 @@ import { faGear, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
 const CartItem = ({cartItem,removeItemFromCart}) => {
     const {serviceName,price} = cartItem;
-    console.log(cartItem)
     return (
         <div className='bg-white text-[#ffb03b] my-2 rounded-md flex justify-evenly items-center py-5'>
             <div className="min-w-[60%]">

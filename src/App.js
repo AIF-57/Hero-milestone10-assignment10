@@ -6,6 +6,7 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import RequireAuth from './Pages/CheckOut/RequireAuth';
 import HomePage from './Pages/Home/HomePage/HomePage';
 import NotFound from './Pages/NotFound/NotFound';
+import Footer from './Pages/Shared/Footer/Footer';
 import Navbar from './Pages/Shared/Navbar/Navbar';
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
           </RequireAuth>
         }/>
         <Route path='*' element={<NotFound></NotFound>}/>
-        </Routes>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
