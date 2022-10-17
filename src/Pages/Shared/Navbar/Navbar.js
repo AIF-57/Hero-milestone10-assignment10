@@ -15,8 +15,8 @@ const Navbar = () => {
 
     // console.log(user);
     return (
-        <div className='grid grid-cols-6 px-10 gap-10 items-center mt-2 mb-1'>
-            <div className="logo col-span-2 text-left">
+        <div className='grid grid-cols-6 px-10 gap-10 items-center mt-2 mb-1 sticky top-0 z-10 bg-[#f5f5f5]'>
+            <div className="logo col-span-2 text-left py-2">
                 <Link to={'/'}>
                 <FontAwesomeIcon icon={faHandshakeAngle} className='text-6xl'></FontAwesomeIcon>
                 <p className='inline-block font-semibold text-lg'><span className='text-4xl font-bold'>a</span>ccountants</p>

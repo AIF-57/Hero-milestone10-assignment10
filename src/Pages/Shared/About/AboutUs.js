@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight,faQuestion,faCalendarAlt, faFileLines, faLock } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight,faQuestion,faCalendarAlt, faFileLines, faImages } from '@fortawesome/free-solid-svg-icons'
 import './AboutUs.css'
 
 
@@ -43,8 +43,8 @@ const AboutUs = () => {
                 </div>
                 <div className="featureCard py-4 border border-dashed rounded-md bg-white flex flex-col justify-center">
                     <div className="card">
-                    <FontAwesomeIcon icon={faLock} className='white text-3xl font-extrabold text-[#ffb03b]'></FontAwesomeIcon>
-                    <p className='white text-[#444444] font-bold my-2'>Login</p>
+                    <FontAwesomeIcon icon={faImages} className='white text-3xl font-extrabold text-[#ffb03b]'></FontAwesomeIcon>
+                    <p className='white text-[#444444] font-bold my-2'>Gallery</p>
                     <button className='white text-[12px] text-[#ffb03b] font-semibold'>Read More</button>
                     </div>
                 </div>
