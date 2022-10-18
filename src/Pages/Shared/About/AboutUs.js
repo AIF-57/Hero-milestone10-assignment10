@@ -6,7 +6,7 @@ import './AboutUs.css'
 
 const AboutUs = () => {
     return (
-        <div className='grid grid-cols-2 gap-10 px-8 py-10 bg-[#f5f5f5]'>
+        <div className='grid md:grid-cols-2 gap-10 px-8 py-10 bg-[#f5f5f5]'>
             <div className="contentContainer  text-left">
                 <div className="contentTitle border-[#2f4d5a] border-l-4 text-[#ffb03b] text-2xl font-bold">
                     <p className='ml-3'>Welcome To</p>

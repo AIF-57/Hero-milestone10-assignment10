@@ -8,7 +8,7 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
         <div className='bg-[#263f49]'>
-            <div className='grid grid-cols-3 gap-x-1 px-10 py-10 border-b border-[#385b6b]'>
+            <div className='grid md:grid-cols-3 gap-x-1 px-10 py-10 border-b border-[#385b6b]'>
             <div className="contacts shadow-lg bg-white border-t-4 py-16 px-5 border-[#ffb03b] relative top-[-80px]">
                 <div className="logo col-span-2 text-left mb-5">
                     <FontAwesomeIcon icon={faHandshakeAngle} className='text-5xl'></FontAwesomeIcon>
@@ -18,7 +18,7 @@ const Footer = () => {
                 <p className='text-sm my-2'><span className='font-semibold'>Phone:</span> 0141 4072000</p>
                 <p className='text-sm'><span className='font-semibold'>Email:</span> caportal@sagipl.com</p>
             </div>
-            <div className="quickLinks text-white text-left px-8">
+            <div className="quickLinks text-white text-left px-8 mt-[-50px] md:mt-0">
                 <p className='text-xl font-semibold border-b border-dashed my-2 py-2'>Quick Links</p>
                 <div className="links text-sm">
                     <ul>

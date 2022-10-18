@@ -33,8 +33,8 @@ const Services = () => {
             <div className="serviceTitle pb-10">
                 <p className='inline-block text-2xl font-bold text-[#2f4d5a]  after:block after:bg-[#ffb03b] after:h-1 after:w-[90%] after:mx-auto after:my-3'>OUR<span className='text-[#ffb03b] relative after:w-4 after:h-4 after:bg-[#2f4d5a] after:block after:absolute after:left-[22%] after:top-[120%] after:rounded-full'> SERVICES</span></p>
             </div>
-            <div className="servicesCartContainer grid grid-cols-4">
-            <div className="serviceCardContainer grid grid-cols-2 col-span-3 gap-5 px-10">
+            <div className="servicesCartContainer grid grid-cols-3 lg:grid-cols-4">
+            <div className="serviceCardContainer grid grid-cols-1 col-span-2 lg:grid-cols-2 lg:col-span-3 gap-5 px-10">
             {
                 services.map(service => <Service 
                     service={service}
