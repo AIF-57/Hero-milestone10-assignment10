@@ -14,7 +14,7 @@ import Services from './Pages/Shared/Services/Services';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App max-w-[1280px] mx-auto">
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<HomePage></HomePage>}/>
