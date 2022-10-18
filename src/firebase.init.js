@@ -6,12 +6,12 @@ import {getAuth} from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB-rLRT3k9XdkpjU02IcPTXusXV8z9bFTE",
-  authDomain: "charterd-accountant.firebaseapp.com",
-  projectId: "charterd-accountant",
-  storageBucket: "charterd-accountant.appspot.com",
-  messagingSenderId: "307380546646",
-  appId: "1:307380546646:web:383a108cc22bad600a5ff7"
+  apiKey: "AIzaSyAFhhEVtQ3-mfBeldnhHVLAKjWj_E507cU",
+  authDomain: "chartered-accountant-aif.firebaseapp.com",
+  projectId: "chartered-accountant-aif",
+  storageBucket: "chartered-accountant-aif.appspot.com",
+  messagingSenderId: "233729466175",
+  appId: "1:233729466175:web:9e5347052bad8bbaee3d8a"
 };
 
 // Initialize Firebase
